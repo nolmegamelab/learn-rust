@@ -65,4 +65,15 @@ mod tests {
     // const unsafe fn add(self, count: usize) -> *const T
     // const unsafe fn sub(self, count: usize) -> *const T
     // const fn wrapping_add(self, count: usize) -> *const T
+    // const fn wrapping_sub(self, count: usize) -> *const T
+    // unsafe fn read(self) -> T
+    // unsafe fn read_volatile(self) -> T
+    // unsafe fn read_unaligned(self) -> T
+    // const unsafe fn copy_to(self, dest: *mut T, count: usize)
+    // const unsafe fn copy_to_nonoverlapping(self, dest: *mut T, count: usize)
+    // fn align_offset(self, align: usize) -> usize
+ 
+    // 많은 함수들이 있고 impl<T: ?Sized> *const T, impl<T: ?Sized> *mut T에 대해 
+    // 각 const_ptr.rs, mut_ptr.rs에서 유사하거나 같은 함수들을 정의한다. 
+
 }
