@@ -120,6 +120,11 @@ mod tests {
         assert_eq!(10, c1.get());
         assert_eq!(5, c2.get());
 
+        // Cell은 UnsafeCell을 통해 unsafe casting으로 메모리를 얻은 후 값을 지정.
+        // 이전 값은 drop된다.
+        c2.set(3i32);
+        assert_eq!(3, c2.get());
+
         // into_inner
         let c = Cell::new(5);
         let five = c.into_inner(); // move 된다. 어디서? UnsafeCell::into_inner()를 통해
@@ -185,11 +190,9 @@ mod tests {
         assert_eq!(c, RefCell::new(6));
         // try_borrow_unguarded
         // take
-        // 
+        //
     }
 
     #[test]
-    fn learn_std_unsafecell_struct() {
-
-    }
+    fn learn_std_unsafecell_struct() {}
 }
