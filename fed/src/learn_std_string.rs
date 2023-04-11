@@ -65,7 +65,17 @@ mod tests {
         assert_eq!(s, "");
     }
 
-    // contains, starts_with, ends_with, split, find 
-    // split_terminator, match_indices, 
-    // 
+    // contains, starts_with, ends_with, split, find
+    // split_terminator, match_indices, trim, trim_start
+    // trim_left, trim_right, trim_matches, trim_start_matches
+    // strip_prefix, strip_suffix, parse
+    // is_ascii, make_ascii_lowercase, replace
+
+    #[test]
+    fn learn_std_string_replace() {
+        let s = "this is old";
+
+        assert_eq!("this is new", s.replace("old", "new"));
+        assert_eq!("than an old", s.replace("is", "an"));
+    }
 }
